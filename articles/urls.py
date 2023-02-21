@@ -7,4 +7,5 @@ urlpatterns = [
     path('<int:pk>/edit/', views.ArticleUpdateView.as_view(), name='article_update'),
     path('<int:pk>/delete/', views.ArticleDeleteView.as_view(), name='article_delete'),
     path('create/', views.ArticleCreateView.as_view(), name='article_create'),
+    path('<int:pk>/comment/', views.ArticleCommentView.as_view(), name='article_comment'),
 ]

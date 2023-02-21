@@ -14,7 +14,8 @@
             <span>
                 {% if user.is_authenticated %}
                     <a href="{% url 'article_update' article.pk %}">Edit</a> |
-                    <a href="{% url 'article_delete' article.pk %}">Delete</a>
+                    <a href="{% url 'article_delete' article.pk %}">Delete</a> |
+                    <a href="{% url 'article_comment' article.pk %}">Comment</a>
                     <p>{{ article.comments.all|length }} Comment(s)</p>
                 {% endif %}
             </span>

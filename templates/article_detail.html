@@ -5,10 +5,10 @@
 {% block content %}
     <h2>{{ object.title }}</h2>
     <p>{{ object.body }}</p>
-    <p>By {{ article.author}} | {{ article.date }}</p>
+    <h6>By {{ article.author}} | {{ article.date }}</h6>
     <p><a href="{% url 'article_list' %}">Back to all articles</a></p>
     {% for comment in object.comments.all %}
-    <p>Comments</p>
+    <h5>Comments</h5>
     <p>{{ comment }}</p>
     {% endfor %}
 

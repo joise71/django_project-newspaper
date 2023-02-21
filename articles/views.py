@@ -40,4 +40,12 @@ class ArticleCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
+class ArticleCommentView(LoginRequiredMixin, CreateView):
+    model = models.Comment
+    template_name = 'article_comment.html'
+    fields = ['comment']
+    login_url = 'login'
+
+
+
 
